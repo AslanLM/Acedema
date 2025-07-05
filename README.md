@@ -49,8 +49,6 @@ page.tsx                    # Landing page principal con navbar
   - **Contáctenos**: `/contactenos/page.tsx` ✔
   - **Login**: `/login/page.tsx`
 
-> ❌ No hay registro desde la página. Solo login para usuarios previamente registrados.
-
 ---
 
 ### 2. Login
@@ -167,5 +165,4 @@ Ruta: `/acedemaApp/dashboard`
 
 1. Revisar con ACEDEMA los puntos ❓ marcados como "Por Confirmar".
 2. Completar información faltante sobre flujos y privilegios.
-3. Diseñar base de datos si no existe.
-4. Opcional: Generar versión en PDF de este documento una vez cerrado.
+
