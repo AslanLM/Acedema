@@ -21,12 +21,12 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrollednav : ''}`}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <div className={styles.logoContainer}>
+          <Link href='/' className={styles.logoContainer}>
             <Image src="/logo.jpg" alt="Logo ACEDEMA" width={200} height={200} priority />
             <h1>ACEDEMA</h1>
-          </div>
+          </Link>
         </div>
-        <div className={styles.links}>
+        <ul className={styles.links}>
           {[
             { href: '/', label: 'Inicio' },
             { href: '/nosotros', label: 'Nosotros' },
@@ -35,11 +35,13 @@ export default function Navbar() {
             { href: '/contactenos', label: 'Contáctenos' },
             { href: '/login', label: 'Iniciar Sesión' },
           ].map((link) => (
-            <Link key={link.href} href={link.href} className={styles.link}>
-              {link.label}
-            </Link>
+            <li key={link.href} className={styles.linkItem}>
+              <Link key={link.href} href={link.href} className={styles.link}>
+                {link.label}
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </nav>
   );
